@@ -3,6 +3,11 @@ MODULE = networkauth
 
 QT = core core-private network
 
+ios {
+    QMAKE_CFLAGS += -Wno-aligned-allocation-unavailable 
+    QMAKE_CXXFLAGS += -Wno-aligned-allocation-unavailable 
+}
+
 PUBLIC_HEADERS += \
     qoauth1.h \
     qoauthglobal.h \
